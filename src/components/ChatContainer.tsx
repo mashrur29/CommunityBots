@@ -358,9 +358,9 @@ const ChatContainer: React.FC<Props> = ({
 
                 {
                     timeLimitExceeded === 1 ?
-                    (<Button href='/poststudy' type='submit' variant="contained" className={classes.proceed}>End
+                    (<Button href='/finish' type='submit' variant="contained" className={classes.proceed}>End
                         Chat</Button>)
-                    : (<Button href='/poststudy' type='submit' variant="contained" className={classes.proceed} disabled={true}>End
+                    : (<Button href='/finish' type='submit' variant="contained" className={classes.proceed} disabled={true}>End
                         Chat</Button>)
                 }
                 {

@@ -182,89 +182,52 @@ const PreStudy: React.FC<Props> = ({}) => {
     //console.log(value1, value2, value3, value4, value5, value6, value7, value8, value9, value10);
     const validate = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        console.log('validating: ', value4);
 
         if (value1 === '') {
-            setHelperText1('Please select an option.');
-            setError1(true);
-        } else {
-            setError1(false);
+            setValue1('None');
         }
 
         if (value2 === '') {
-            setHelperText2('Please select an option.');
-            setError2(true);
-        } else {
-            setError2(false);
+            setValue2('None');
         }
 
         if (value3 === '') {
-            setHelperText3('Please select an option.');
-            setError3(true);
-        } else {
-            setError3(false);
+            setValue3('None');
         }
 
         if (value4 === '') {
-            setHelperText4('Please select an option.');
-            setError4(true);
-        } else {
-            setError4(false);
+            setValue4('None');
         }
 
         if (value5 === '') {
-            setHelperText5('Please select an option.');
-            setError5(true);
-        } else {
-            setError5(false);
+            setValue5('None');
         }
 
         if (value6 === '') {
-            setHelperText6('Please enter a city name.');
-            setError6(true);
-        } else {
-            setError6(false);
+            setValue6('None');
         }
 
         if (value7 === '') {
-            setHelperText7('Please answer.');
-            setError7(true);
-        } else {
-            setError7(false);
+            setValue7('None');
         }
 
         if (value8.length === 0) {
-            setHelperText8('Please select an option.');
-            setError8(true);
-        } else {
-            setError8(false);
+            SetValue8([]);
         }
 
         if (value9 === '') {
-            setHelperText9('Please select an option.');
-            setError9(true);
-        } else {
-            setError9(false);
+            setValue9('None');
         }
 
-        if (value9 !== '' && value9 === 'Yes') {
-            if (value10 === '') {
-                setHelperText10('Please select an option.');
-                setError10(true);
-            } else {
-                setError10(false);
-            }
+        if (value10 === '') {
+            setValue10('None');
         }
 
-
-        if (value1 !== '' && value2 !== '' && value3 !== '' && value4 !== '' && value5 !== '' && value6 !== '' && value7 !== '' && value8.length !== 0 && value9 !== '') {
-            setWaitDiv(true);
-            setPreStudyAnswer(docId, value1, value2, value3, value4, value5, value6, value7, value8, value9, value10);
-            setTimeout(() => {
-                window.open('/chat', '_self');
-            }, 10000);
-
-        }
+        setWaitDiv(true);
+        setPreStudyAnswer(docId, value1, value2, value3, value4, value5, value6, value7, value8, value9, value10);
+        setTimeout(() => {
+            window.open('/chat', '_self');
+        }, 10000);
 
     }
 
@@ -272,7 +235,7 @@ const PreStudy: React.FC<Props> = ({}) => {
         <form onSubmit={validate}>
             <div className={classes.questions}>
                 <Typography variant='h5'>
-                    <span style={{color: "#666666"}}>Pre-Study Questions</span>
+                    <span style={{color: "#666666"}}>Tell us a little bit about yourself</span>
                 </Typography>
                 <Typography>
                     <span
@@ -303,16 +266,16 @@ const PreStudy: React.FC<Props> = ({}) => {
                 <br/>
 
                 <FormControl error={error2} component="fieldset" className={classes.question}>
-                    <FormLabel component="legend" style={{color: 'black'}}>Q2) What is your gender?</FormLabel>
+                    <FormLabel component="legend" style={{color: 'black'}}>Q2) What is your pronoun?</FormLabel>
                     <RadioGroup aria-required onChange={handleRadioChange2} value={value2} row aria-label="gender"
                                 name="row-radio-buttons-group" style={{color: 'black'}}>
-                        <FormControlLabel value="Male" control={<Radio style={{color: '#999999',}} size='small'/>}
-                                          label="Male"/>
-                        <FormControlLabel value="Female" control={<Radio style={{color: '#999999',}} size='small'/>}
-                                          label="Female"/>
-                        <FormControlLabel value="Non-binary"
+                        <FormControlLabel value="he/him" control={<Radio style={{color: '#999999',}} size='small'/>}
+                                          label="he/him"/>
+                        <FormControlLabel value="she/her" control={<Radio style={{color: '#999999',}} size='small'/>}
+                                          label="she/her"/>
+                        <FormControlLabel value="they/them"
                                           control={<Radio style={{color: '#999999',}} size='small'/>}
-                                          label="Non-binary"/>
+                                          label="they/them"/>
                         <FormControlLabel value="Prefer not to say"
                                           control={<Radio style={{color: '#999999',}} size='small'/>}
                                           label="Prefer not to say"/>
@@ -374,8 +337,6 @@ const PreStudy: React.FC<Props> = ({}) => {
                                           label="Government"/>
                         <FormControlLabel value="Education" control={<Radio style={{color: '#999999',}} size='small'/>}
                                           label="Education"/>
-                        <FormControlLabel value="Student" control={<Radio style={{color: '#999999',}} size='small'/>}
-                                          label="Student"/>
                         <FormControlLabel value="Service" control={<Radio style={{color: '#999999',}} size='small'/>}
                                           label="Service"/>
                         <FormControlLabel value="Prefer not to say"
@@ -461,9 +422,9 @@ const PreStudy: React.FC<Props> = ({}) => {
                         <FormControlLabel value="Native Hawaiian or Pacific Islander"
                                           control={<Radio style={{color: '#999999',}} size='small'/>}
                                           label="Native Hawaiian or Pacific Islander"/>
-                        <FormControlLabel value="Two or More"
+                        <FormControlLabel value="Mixed race"
                                           control={<Radio style={{color: '#999999',}} size='small'/>}
-                                          label="Two or More"/>
+                                          label="Mixed race"/>
                         <FormControlLabel value="White"
                                           control={<Radio style={{color: '#999999',}} size='small'/>}
                                           label="White"/>
@@ -602,7 +563,6 @@ const PreStudy: React.FC<Props> = ({}) => {
             <div className={classes.submit}>
                 <Button type='submit' variant="contained" className={classes.proceed}>Proceed</Button>
             </div>
-
 
 
         </form>
