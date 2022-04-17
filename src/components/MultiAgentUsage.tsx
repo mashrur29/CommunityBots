@@ -42,10 +42,10 @@ const MultiAgentUsage: React.FC<Props> = ({}) => {
             <p style={{color: "red", textAlign: 'center', fontSize: '15px'}}>** After accepting the consent form on the first page please do not close the window or hit refresh unless you want to start over. **</p>
         </Typography>
         <Typography variant='h6' className={classes.item}>
-            <span style={{color: "#666666"}}><b>Pre-study Questionnaire</b></span>
+            <span style={{color: "#666666"}}><b>Demographic Questionnaire</b></span>
         </Typography>
         <Typography>
-            <p style={{color: "#000000", textAlign: 'justify'}}>After you start the study, you will be taken to a pre-study questionnaire. Answer these questions to the best of your ability. The questions are intended to provide us with a general understanding of our participants. When you've finished answering all of them, click the "PROCEED" button.</p>
+            <p style={{color: "#000000", textAlign: 'justify'}}>After you start the study, you will be taken to a questionnaire. Answer these questions to the best of your ability. The questions are intended to provide us with a general understanding of our participants. When you've finished answering all of them, click the "PROCEED" button.</p>
         </Typography>
         <Typography variant='h6' className={classes.item}>
             <span style={{color: "#666666"}}><b>Conversing with CommunityBots</b> </span>
@@ -53,7 +53,7 @@ const MultiAgentUsage: React.FC<Props> = ({}) => {
 
         <img src={chatStart} width="70%" /><br/>
         <Typography>
-            <p style={{color: "#000000", textAlign: 'justify'}}>After completing the pre-study questions, you will be taken to a page to converse with CommunityBots. As seen in the image, the leftmost region contains information on the chatbots that you will converse with. The logo of the chatbot that will ask you questions will have its eyes open and will display the name of the topic on which it is currently conversing with you below it. You will also see a timer at the top where you can check the time elapsed from the start of your conversation. You can type your response to the chatbot's question in the textbox region below. After you are done typing your response either hit "Enter" on your keyboard or click the button beside the text box to send your response. The chat history between you and the chatbot is stored in the upper-right region. It displays the message from the chatbot on the left and your message on the right.</p>
+            <p style={{color: "#000000", textAlign: 'justify'}}>After completing the demographic questions, you will be taken to a page to converse with CommunityBots. As seen in the image, the leftmost region contains information on the chatbots that you will converse with. The logo of the chatbot that will ask you questions will have its eyes open and will display the name of the topic on which it is currently conversing with you below it. You will also see a timer at the top where you can check the time elapsed from the start of your conversation. You can type your response to the chatbot's question in the textbox region below. After you are done typing your response either hit "Enter" on your keyboard or click the button beside the text box to send your response. The chat history between you and the chatbot is stored in the upper-right region. It displays the message from the chatbot on the left and your message on the right.</p>
         </Typography><br/>
         <img src={chatSkip} width="70%" /><br/>
         <Typography>
@@ -76,15 +76,7 @@ const MultiAgentUsage: React.FC<Props> = ({}) => {
             </p>
         </Typography>
 
-        <Typography variant='h6' className={classes.item}>
-            <span style={{color: "#666666"}}><b>Post-study Questionnaire</b> </span>
-        </Typography>
-        <Typography>
-            <p style={{color: "#000000", textAlign: "justify"}}>
-                Following your conversation with CommunityBots, you must complete the post-study questions. The post-study questions are critical for answering our research questions, and you must complete them in order to receive payment. After you have completed the post-study questions, you must click the "FINISH" button. This will take you to the final page, which contains your user id. To receive your payment, you must save this id and submit it via Mechanical Turk.
-            </p>
-        </Typography><br/>
-        <img src={chatId} width="68%"/><br/>
+
 
         <br/>
         <div className={classes.submit}>

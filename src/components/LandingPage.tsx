@@ -27,15 +27,6 @@ const LandingPage: React.FC<Props> = ({}) => {
 
     return (<>
         <Typography variant='h5' className={classes.instructions}>
-            <span style={{color: "#000000"}}>Introduction</span>
-        </Typography>
-        <Typography className={classes.item}>
-            <span style={{color: "#000000"}}>Welcome to CommunityBots! The COVID-19 pandemic has transformed people's lives and their experience of space and mobility. Big cities have large infrastructures to support people’s mobility. But smaller communities, like ours, rely on individual resources and self-sustaining structures that may have been severely impacted by the pandemic, causing permanent shifts in daily life. We are researchers at the Landscape Architecture and Regional Planning (LARP) and Manning College of Information and Computer Sciences (CICS) at the University of Massachusetts Amherst. In order to better understand the impacts of COVID-19, we have designed and developed a new chatbot platform — CommunityBots. The chatbot is designed to converse with people and collect information regarding their experiences during COVID-19 and the impacts it had on their lives. If you want to learn how to use this platform, go to the top navigation bar and click the “Tutorial” button.</span>
-        </Typography>
-        <Typography className={classes.item}>
-            <span style={{color: "#000000"}}>Please help us in our study by sharing your experiences during COVID-19 via CommunityBots. Your provided information will be anonymous. Your participation will essentially help us to design and build a series of interactive visualizations, such as maps and diagrams, of Amherst and its neighborhoods to help both civilians and experts understand and absorb the implications of the pandemic on their lives as well as the community.</span>
-        </Typography>
-        <Typography variant='h5' className={classes.instructions}>
             <span style={{color: "#000000"}}>Informed Consent</span>
         </Typography>
         <Typography className={classes.item}>
@@ -111,7 +102,7 @@ const LandingPage: React.FC<Props> = ({}) => {
         </Typography>
         <Typography className={classes.item}>
             <span style={{color: "#000000"}}>
-                You will be compensated with $XXX for participating if you complete the conversation with the chatbot application, and submit the code generated after the end of the study. You must spend at least two minutes conversing with the chatbot. If you withdraw for any reason from the study before completion you will not be compensated. We ask that you answer each question to the best of your ability, but the content of your answers will not affect your payment.
+                Participation in this study is completely voluntary and the participants will not be compensated for their participation.
             </span>
         </Typography>
 

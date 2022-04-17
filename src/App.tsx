@@ -23,6 +23,7 @@ import PopSound from './assets/audio/pop.wav';
 import PostStudy from "./components/PostStudy";
 import Finish from "./components/Finish";
 import MultiAgentUsage from "./components/MultiAgentUsage";
+import Introduction from "./components/tutorial/Introduction";
 
 const theme = createMuiTheme({
     palette: {
@@ -252,6 +253,7 @@ const App: React.FC<Props> = ({ws1, chatAgent1, chatTopic1, chatInfo1}) => {
                     <Navbar isAdmin={isAdmin}/>
                     <main className={classes.root}>
                         <Switch>
+                            <Route path='/consent' render={() => <LandingPage/>}/>
                             <Route path='/tutorial' render={() => <MultiAgentUsage/>}/>
                             <Route path='/prestudy' render={() => <PreStudy/>}/>
                             <Route path='/chat'
@@ -264,7 +266,7 @@ const App: React.FC<Props> = ({ws1, chatAgent1, chatTopic1, chatInfo1}) => {
                                    />}/>
                             <Route path='/poststudy' render={() => <PostStudy/>}/>
                             <Route path='/finish' render={() => <Finish/>}/>
-                            <Route path='/' render={() => <LandingPage/>}/>
+                            <Route path='/' render={() => <Introduction/>}/>
                         </Switch>
                     </main>
                 </div>
