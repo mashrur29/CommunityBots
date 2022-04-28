@@ -8,7 +8,7 @@ import util from "util";
 import req from 'request-promise';
 import {startChats} from './juji';
 
-console.log('JUJI connection establishing')
+//console.log('JUJI connection establishing')
 
 startChats().then(
     function (v1) {
@@ -17,7 +17,7 @@ startChats().then(
         var chatAgent1 = v1[2];
         var chatTopic1 = v1[3];
 
-        console.log('URL setup, now starting ........')
+        //console.log('URL setup, now starting ........')
 
         ReactDOM.render(
             <App

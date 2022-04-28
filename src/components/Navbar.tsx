@@ -27,7 +27,7 @@ const Navbar: React.FC<Props> = ({ isAdmin }) => {
                 </Typography>
               </Button>
 
-              <a target="_blank" rel="noopener noreferrer" href={'https://communitybots-usage.web.app/multiagent'} style={{ textDecoration: 'none' }}>
+              <a target="_blank" rel="noopener noreferrer" href={'https://communitybots-usage.web.app/multiagentwild'} style={{ textDecoration: 'none' }}>
               <Button color='inherit' style={{ textTransform: 'none' }}>
                 <Typography >
                   <span style={{fontSize: "15", color: "#FFFFFF" }}>Tutorial</span>

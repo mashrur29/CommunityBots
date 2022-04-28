@@ -138,7 +138,7 @@ const ChatContainer: React.FC<Props> = ({
         if (currentTopic < topics) {
             if (ws.readyState === WebSocket.OPEN) {
                 ws.onmessage = function (incoming: any) {
-                    console.log('In ws');
+                    //console.log('In ws');
 
                     var data = JSON.parse(incoming.data);
 
@@ -161,7 +161,7 @@ const ChatContainer: React.FC<Props> = ({
                                     //sendMessage(chat.id!, chatAgent, msg, chatTopic);
                                     currentTopic = incrementTopic();
                                     if (currentTopic >= topics) {
-                                        sendMessage(chat.id!, chatAgent, "Thank you! the survey is now complete. Please click on 'END CHAT' to start the post-study questionnaire.", chatTopic);
+                                        sendMessage(chat.id!, chatAgent, "Thank you! the survey is now complete. Please click on 'END CHAT' button.", chatTopic);
                                     } else {
                                         var welcMsg = welcomeMessages[currentTopic];
                                         setTimeout(() => {
@@ -184,9 +184,9 @@ const ChatContainer: React.FC<Props> = ({
                                     }
                                 }
                             } else if (message.type == 'user-joined') {
-                                console.log('');
-                                console.log('=== Welcome to Juji Bot ===');
-                                console.log('');
+                                //console.log('');
+                                //console.log('=== Welcome to Juji Bot ===');
+                                //console.log('');
                             }
                         }
                     } else {
@@ -416,7 +416,10 @@ const ChatContainer: React.FC<Props> = ({
                                 onKeyUp={(e) => {
                                     //console.log(`Pressed keyCode ${ev.key}`);
                                     if (e.key === 'Enter' && !e.shiftKey) {
-                                        addMessage(state.messageInp.replace(/\n$/, ""), state.topic, ws, chatInfo, setCbtyping);
+                                        var msg = state.messageInp.replace(/\n$/, "");
+                                        msg = msg.replace(/\/+$/, "");
+                                        msg = msg.replace(/\\+$/, "");
+                                        addMessage(msg, state.topic, ws, chatInfo, setCbtyping);
                                         setState(initState);
                                         //setCbtyping(true);
                                     }
@@ -535,7 +538,7 @@ const ChatContainer: React.FC<Props> = ({
                             currentTopic >= 11? (
                                 <div>
                                     <div style={{color: "black", textAlign: "center", fontSize: "12px"}}>--------------------------</div>
-                                    <div style={{color: "black", textAlign: "center", fontSize: "15px"}}><b>You may now click on the "END CHAT" button to proceed to the post-study questions</b></div>
+                                    <div style={{color: "black", textAlign: "center", fontSize: "15px"}}><b>You may now click on the "END CHAT" button to end the conversation</b></div>
                                 </div>
                             ):(
                                 <div></div>

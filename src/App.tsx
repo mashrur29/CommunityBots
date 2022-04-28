@@ -115,6 +115,7 @@ const App: React.FC<Props> = ({ws1, chatAgent1, chatTopic1, chatInfo1}) => {
             setCbtyping(true);
             userChatStarted = 1;
             var msg = messageText.replace(/\n$/, "");
+            msg = msg.replace(/\/+$/, "");
 
             if (msg.length !== 0) {
 
@@ -134,7 +135,7 @@ const App: React.FC<Props> = ({ws1, chatAgent1, chatTopic1, chatInfo1}) => {
                     sendMessage(chat.id!, sentBy, msg, chatTopic);
                     if (currentTopic >= topics) {
                         setTimeout(() => {
-                            sendMessage(chat.id!, chatAgent, "Thank you! the survey is now complete. Please click on 'END CHAT' to start the post-study questionnaire.", chatTopic);
+                            sendMessage(chat.id!, chatAgent, "Thank you! the survey is now complete. Please click on 'END CHAT' button.", chatTopic);
                         }, 200);
                         setCbtyping(false);
                     } else {
@@ -169,7 +170,7 @@ const App: React.FC<Props> = ({ws1, chatAgent1, chatTopic1, chatInfo1}) => {
                         //sendMessage(chat.id!, chatAgent, conclMsg, chatTopic);
                         if (currentTopic >= topics) {
                             setTimeout(() => {
-                                sendMessage(chat.id!, chatAgent, "Thank you! the survey is now complete. Please click on 'END CHAT' to start the post-study questionnaire.", chatTopic);
+                                sendMessage(chat.id!, chatAgent, "Thank you! the survey is now complete. Please click on 'END CHAT' button.", chatTopic);
                             }, 200);
                             setCbtyping(false);
                         } else {
@@ -201,7 +202,7 @@ const App: React.FC<Props> = ({ws1, chatAgent1, chatTopic1, chatInfo1}) => {
                             }
                         } else {
                             setTimeout(() => {
-                                sendMessage(chat.id!, chatAgent, "Thank you! the survey is now complete. Please click on 'END CHAT' to start the post-study questionnaire.", chatTopic);
+                                sendMessage(chat.id!, chatAgent, "Thank you! the survey is now complete. Please click on 'END CHAT' button.", chatTopic);
                             }, 200);
                             setCbtyping(false);
                         }
@@ -214,12 +215,12 @@ const App: React.FC<Props> = ({ws1, chatAgent1, chatTopic1, chatInfo1}) => {
                         }
                     } else {
                         setTimeout(() => {
-                            sendMessage(chat.id!, chatAgent, "Thank you! the survey is now complete. Please click on 'END CHAT' to start the post-study questionnaire.", chatTopic);
+                            sendMessage(chat.id!, chatAgent, "Thank you! the survey is now complete. Please click on 'END CHAT' button.", chatTopic);
                         }, 200);
                         setCbtyping(false);
                     }
                 } else {
-                    sendMessage(chat.id!, chatAgent, "Thank you! the survey is now complete. Please click on 'END CHAT' to start the post-study questionnaire.", chatTopic);
+                    sendMessage(chat.id!, chatAgent, "Thank you! the survey is now complete. Please click on 'END CHAT' button.", chatTopic);
                     setCbtyping(false);
                 }
             }

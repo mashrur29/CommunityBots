@@ -30,7 +30,7 @@ const UserChat: React.FC<Props> = ({addMessage, chat, initChat, chatAgent1, chat
     useEffect(() => {
         const id_local = (new URLSearchParams(window.location.search)).get('id');
         const id_cookie = localStorage.getItem('id');
-        console.log("Id:" + id_local + ' or ' + id_cookie)
+        //console.log("Id:" + id_local + ' or ' + id_cookie)
         //const id = systemName
         /*if (id_local) {
             setChatId(id_local);

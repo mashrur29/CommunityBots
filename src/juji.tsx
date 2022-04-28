@@ -167,7 +167,7 @@ export async function startChats() {
         ws_t.onopen = function () {
             this.timeout = 1800000;
             ws_t.send(util.format(subFormat, chatInfo_t.participationId));
-            console.log('JUJI connection established: ', chatInfo_t);
+            //console.log('JUJI connection established: ', chatInfo_t);
             ws.push(ws_t);
         };
     }

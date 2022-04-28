@@ -7,6 +7,7 @@ import chatSkip from '../assets/tutorial/skip_topic.png';
 import chatEnd from '../assets/tutorial/end_chat.png';
 import chatTurn from '../assets/tutorial/turn-taking.png';
 import chatId from '../assets/tutorial/user_id.png';
+import {finished} from "stream";
 
 interface Props {
 };
@@ -72,9 +73,10 @@ const MultiAgentUsage: React.FC<Props> = ({}) => {
         <img src={chatEnd} width="68%" style={{paddingLeft:"1%"}}/><br/>
         <Typography>
             <p style={{color: "#000000", textAlign: "justify"}}>
-                 When the conversation is finished, you must click the "END CHAT" button that appears below the names of the expert chatbots. This takes you to the Post-study questionnaire.
+                 When the conversation is finished, you must click the "END CHAT" button that appears below the names of the expert chatbots. You will be given a unique user ID on the final page. You can use that to contact us if you have any further questions.
             </p>
-        </Typography>
+        </Typography><br/>
+        <img src={chatId} width="68%" style={{paddingLeft:"1%"}}/><br/>
 
 
 

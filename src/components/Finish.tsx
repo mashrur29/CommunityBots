@@ -17,7 +17,7 @@ const Finish: React.FC<Props> = () => {
         </Typography>
 
         <Typography variant='h6'>
-            <span style={{color: "#666666", marginTop: '10%'}}>If you are a Mechanical Turker, please copy your user ID and proceed to Mechanical-Turk for the last step to finish the study and receive your payment.</span>
+            <span style={{color: "#666666", marginTop: '10%'}}>You may use this id to contact us if you require any additional information about the study.</span>
         </Typography>
 
     </div>);
