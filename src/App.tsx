@@ -142,7 +142,7 @@ const App: React.FC<Props> = ({ws1, chatAgent1, chatTopic1, chatInfo1}) => {
                         var welcMsg = welcomeMessages[currentTopic];
                         //setCbtyping(true);
                         setTimeout(() => {
-                            sendMessage(chat.id!, chatAgent1[currentTopic-1], "Thank you for taking the time to respond to this topic's questions. I'm going to stop asking questions on this subject now.", chatTopic1[currentTopic]);
+                            sendMessage(chat.id!, chatAgent1[currentTopic-1], "Thanks! I will change the topic now.", chatTopic1[currentTopic]);
                         }, 200);
                         setTimeout(() => {
                             sendMessage(chat.id!, chatAgent1[currentTopic], welcMsg, chatTopic1[currentTopic]);
@@ -177,7 +177,7 @@ const App: React.FC<Props> = ({ws1, chatAgent1, chatTopic1, chatInfo1}) => {
                             var welcMsg = welcomeMessages[currentTopic];
                             //setCbtyping(true);
                             setTimeout(() => {
-                                sendMessage(chat.id!, chatAgent1[currentTopic-1], "Thank you for taking the time to respond to this topic's questions. I'm going to stop asking questions on this subject now.", chatTopic1[currentTopic]);
+                                sendMessage(chat.id!, chatAgent1[currentTopic-1], "Thanks! I will change the topic now.", chatTopic1[currentTopic]);
                             }, 200);
 
                             setTimeout(() => {

@@ -17,32 +17,20 @@ export function makeid(length: any) {
 export const topics = 11;
 
 const webUrl = [
-    "https://juji.ai/pre-chat/614b3ce2-ab43-4cfc-b11d-808abbd3e9c0",
-    "https://juji.ai/pre-chat/614c096f-82a2-4633-97c4-30bdde0ed3d8",
-    "https://juji.ai/pre-chat/6150e2a3-a30b-41c6-9616-5778cdee3a42",
-    "https://juji.ai/pre-chat/61510749-538c-4afa-97cb-18eaabe7fa13",
-    "https://juji.ai/pre-chat/615167bb-61ee-454c-930a-b9013f298431",
-    "https://juji.ai/pre-chat/6154ae99-3549-4924-b0b4-2480396658da",
-    "https://juji.ai/pre-chat/6154baf2-7736-4ee2-979c-936070fcbf68",
-    "https://juji.ai/pre-chat/61554f72-a94a-4e99-abe9-8a90208ec55b",
-    "https://juji.ai/pre-chat/6155d87e-56b2-44e8-a83a-8fa73fb41e93",
-    "https://juji.ai/pre-chat/6155ddaf-f7d7-4f3c-98a0-285895c95530",
-    "https://juji.ai/pre-chat/6155f62e-1651-4b18-bc7e-43004f4eac3c"
+    "https://juji.ai/pre-chat/62890518-1b43-4ef2-8bbc-d44f83203166",
+    "https://juji.ai/pre-chat/6289cfbd-86c5-45c2-8aa4-8252d6dffec5",
+    "https://juji.ai/pre-chat/6289df54-7c15-4a32-9833-02d39668fe6b",
+    "https://juji.ai/pre-chat/6289e03a-5511-4067-9960-72d3e508b4dd",
+    "https://juji.ai/pre-chat/62922343-35ad-4fe5-9bbd-31c1af2326fa",
+    "https://juji.ai/pre-chat/62925c41-0bb5-49ee-8424-840cfa6ae82b",
+    "https://juji.ai/pre-chat/6292654e-aa88-4fbf-be41-d4dfbf8ed092",
+    "https://juji.ai/pre-chat/62927958-2a34-4a74-90a2-a3d2548cdd0a",
+    "https://juji.ai/pre-chat/62927cf4-c956-4039-9fd4-f92dac5cd622",
+    "https://juji.ai/pre-chat/629280d4-7565-47f8-be45-5e02cb6f4f2a",
+    "https://juji.ai/pre-chat/62929535-0b57-4194-ac55-434ab240e46f"
 ];
 
-const testUrl = [
-    "https://juji.ai/pre-chat/614b3ce2-ab43-4cfc-b11d-808abbd3e9c0?mode=test",
-    "https://juji.ai/pre-chat/614c096f-82a2-4633-97c4-30bdde0ed3d8?mode=test",
-    "https://juji.ai/pre-chat/6150e2a3-a30b-41c6-9616-5778cdee3a42?mode=test",
-    "https://juji.ai/pre-chat/61510749-538c-4afa-97cb-18eaabe7fa13?mode=test",
-    "https://juji.ai/pre-chat/615167bb-61ee-454c-930a-b9013f298431?mode=test",
-    "https://juji.ai/pre-chat/6154ae99-3549-4924-b0b4-2480396658da?mode=test",
-    "https://juji.ai/pre-chat/6154baf2-7736-4ee2-979c-936070fcbf68?mode=test",
-    "https://juji.ai/pre-chat/61554f72-a94a-4e99-abe9-8a90208ec55b?mode=test",
-    "https://juji.ai/pre-chat/6155d87e-56b2-44e8-a83a-8fa73fb41e93?mode=test",
-    "https://juji.ai/pre-chat/6155ddaf-f7d7-4f3c-98a0-285895c95530?mode=test",
-    "https://juji.ai/pre-chat/6155f62e-1651-4b18-bc7e-43004f4eac3c?mode=test"
-];
+const testUrl = [];
 
 const chatTopics = [
     "Dwelling" ,
@@ -74,16 +62,16 @@ const chatAgent = [
 
 export const welcomeMessages = [
     "Hello and thank you for connecting! I am an intelligent AI chatbot who will ask you some questions about Covid 19 and its impact on your life. At first, I am going to ask you a few questions about your dwelling. In what ways has your home changed?",
-    "Now I'd like to ask you some questions about your family and home life. What was your daily life like before COVID began?",
-    "Now I'm going to ask you a few questions about virtual connections. Have you been able to connect with others abroad through any online platforms?",
-    "Finally I'd like to ask you a few questions about your household. Do you use delivery services more than you used to?",
+    "Now I'd like to ask you some questions about your family and home life. Did the pandemic force you to make any large life changes? For example, moving or changing career paths.",
+    "Now I'm going to ask you a few questions about virtual connections. Have you been able to connect with others (friends, colleagues, etc.) abroad through any online platforms?",
+    "Finally I'd like to ask you a few questions about your household. Did you use delivery services during the pandemic?",
     "Hello, I'm a work expert chatbot who will ask you questions about your everyday work routine.",
-    "Now I'm going to ask you some questions about your job. Were you working during the height of the pandemic?",
-    "Now I'd like to ask you some questions about your education. Are you a student and if so at what level?",
-    "Finally I am going to ask you some questions about online video conferencing. How do you feel about video conferencing?",
+    "Now I'm going to ask you some questions about your job. How has the pandemic affected your employment status?",
+    "Now I'd like to ask you some questions about your education. Are you a student?",
+    "Finally I am going to ask you some questions about online video conferencing. How have the tele-work methods affected your work (in the short and long runs)? Can you think of concrete examples such as time it takes to get a task done, or the propensity to get distracted by online shopping or social media?",
     "Hello, I'm a healthcare expert chatbot who will inquire about how you maintain your physical and mental well-being.",
-    "Now I'm going to ask you some questions about your recreational activities. What do you do for leisure? If anything?",
-    "Finally I am going to ask you some questions about your hobbies. Have you picked up any hobbies since COVID began?"
+    "Now I'm going to ask you some questions about your recreational activities. What do you do for leisure?",
+    "Finally I am going to ask you some questions about your hobbies. Do you have any hobbies?"
 ];
 
 export const welcomeMessages2 = [
@@ -105,7 +93,7 @@ export const welcomeMessages3 = [
     "",
     "",
     "",
-    "Did your daily transitions (a commute, a daily walk, a daily coffee?) disappear over the pandemic?",
+    "Did your daily transitions (a commute, a daily walk, a daily coffee) disappear over the pandemic?",
     "",
     "",
     "",
@@ -165,7 +153,7 @@ export async function startChats() {
         const ws_t = new WebSocket(chatInfo_t.websocketUrl);
 
         ws_t.onopen = function () {
-            this.timeout = 1800000;
+            this.timeout = 18000000000000;
             ws_t.send(util.format(subFormat, chatInfo_t.participationId));
             //console.log('JUJI connection established: ', chatInfo_t);
             ws.push(ws_t);
