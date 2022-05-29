@@ -136,6 +136,8 @@ const ChatContainer: React.FC<Props> = ({
     useEffect(() => {
         messagesEndRef.current!.scrollIntoView({behavior: "smooth"});
         if (currentTopic < topics) {
+
+
             if (ws.readyState === WebSocket.OPEN) {
                 ws.onmessage = function (incoming: any) {
                     //console.log('In ws');
@@ -145,8 +147,8 @@ const ChatContainer: React.FC<Props> = ({
                     if ('data' in data && 'chat' in data.data) {
 
                         var message = data.data.chat;
-                        if (message.role == 'rep') {
-                            if (message.type == 'normal' && message.text !== null) {
+                        if (message.role === 'rep') {
+                            if (message.type === 'normal' && message.text !== null) {
                                 setCbtyping(false);
                                 var msg = message.text.replace(/<[^>]+>/g, '');
                                 if (msg !== 'Hello639') {
@@ -193,6 +195,25 @@ const ChatContainer: React.FC<Props> = ({
                         //setCbtyping(true);
                     }
                 };
+            } else {
+                if (currentTopic >= topics) {
+                    sendMessage(chat.id!, chatAgent, "Thank you! the survey is now complete. Please click on 'END CHAT' button.", chatTopic);
+                } else {
+                    var welcMsg = welcomeMessages[currentTopic];
+                    setTimeout(() => {
+                        sendMessage(chat.id!, chatAgent1[currentTopic], welcMsg, chatTopic1[currentTopic]);
+                    }, 205);
+                    setCbtyping(false);
+
+                    if (currentTopic === 4 || currentTopic === 8) {
+                        setTimeout(() => {
+                            sendMessage(chat.id!, chatAgent1[currentTopic], welcomeMessages2[currentTopic], chatTopic1[currentTopic]);
+                        }, 210);
+                        setTimeout(() => {
+                            sendMessage(chat.id!, chatAgent1[currentTopic], welcomeMessages3[currentTopic], chatTopic1[currentTopic]);
+                        }, 215);
+                    }
+                }
             }
         }
 
@@ -245,7 +266,6 @@ const ChatContainer: React.FC<Props> = ({
     }
 
 
-
     return (
         <div className={classes.backdrop}>
 
@@ -293,7 +313,11 @@ const ChatContainer: React.FC<Props> = ({
                     chatAgent == 'chatbotAgentA'
                         ? (
                             <Typography className={classes.topicInfo}
-                                        style={{background: '#f4b183', border: '0px', fontSize: "13px"}}> Topic: {state.topic} </Typography>
+                                        style={{
+                                            background: '#f4b183',
+                                            border: '0px',
+                                            fontSize: "13px"
+                                        }}> Topic: {state.topic} </Typography>
                         )
                         :
                         (
@@ -320,7 +344,11 @@ const ChatContainer: React.FC<Props> = ({
                     chatAgent == 'chatbotAgentB'
                         ? (
                             <Typography className={classes.topicInfo}
-                                        style={{background: '#9dc3e6', border: '0px', fontSize: "12px"}}> Topic: {state.topic} </Typography>
+                                        style={{
+                                            background: '#9dc3e6',
+                                            border: '0px',
+                                            fontSize: "12px"
+                                        }}> Topic: {state.topic} </Typography>
                         )
                         :
                         (
@@ -347,7 +375,11 @@ const ChatContainer: React.FC<Props> = ({
                     chatAgent == 'chatbotAgentC'
                         ? (
                             <Typography className={classes.topicInfo}
-                                        style={{background: '#a9ce91', border: '0px', fontSize: "13px"}}> Topic: {state.topic} </Typography>
+                                        style={{
+                                            background: '#a9ce91',
+                                            border: '0px',
+                                            fontSize: "13px"
+                                        }}> Topic: {state.topic} </Typography>
                         )
                         :
                         (
@@ -358,31 +390,32 @@ const ChatContainer: React.FC<Props> = ({
 
                 {
                     timeLimitExceeded === 1 ?
-                    (<Button href='/finish' type='submit' variant="contained" className={classes.proceed}>End
-                        Chat</Button>)
-                    : (<Button href='/finish' type='submit' variant="contained" className={classes.proceed} disabled={true}>End
-                        Chat</Button>)
+                        (<Button href='/finish' type='submit' variant="contained" className={classes.proceed}>End
+                            Chat</Button>)
+                        : (<Button href='/finish' type='submit' variant="contained" className={classes.proceed}
+                                   disabled={true}>End
+                            Chat</Button>)
                 }
                 {
-                    currentTopic>=topics && window.innerHeight >= 750? (
+                    currentTopic >= topics && window.innerHeight >= 750 ? (
                         <div style={{paddingBottom: '10%'}}></div>
-                    ):(
+                    ) : (
                         <div></div>
                     )
                 }
 
                 {
-                    currentTopic>=topics && window.innerHeight < 750? (
+                    currentTopic >= topics && window.innerHeight < 750 ? (
                         <div style={{paddingBottom: '10%'}}></div>
-                    ):(
+                    ) : (
                         <div></div>
                     )
                 }
 
                 {
-                    window.innerHeight >= 750? (
+                    window.innerHeight >= 750 ? (
                         <div style={{paddingBottom: "4%"}}></div>
-                    ):(
+                    ) : (
                         <div style={{paddingBottom: "0%"}}></div>
                     )
                 }
@@ -535,12 +568,18 @@ const ChatContainer: React.FC<Props> = ({
                             : <div/>
                         }
                         {
-                            currentTopic >= 11? (
+                            currentTopic >= 11 ? (
                                 <div>
-                                    <div style={{color: "black", textAlign: "center", fontSize: "12px"}}>--------------------------</div>
-                                    <div style={{color: "black", textAlign: "center", fontSize: "15px"}}><b>You may now click on the "END CHAT" button to end the conversation</b></div>
+                                    <div style={{
+                                        color: "black",
+                                        textAlign: "center",
+                                        fontSize: "12px"
+                                    }}>--------------------------
+                                    </div>
+                                    <div style={{color: "black", textAlign: "center", fontSize: "15px"}}><b>You may now
+                                        click on the "END CHAT" button to end the conversation</b></div>
                                 </div>
-                            ):(
+                            ) : (
                                 <div></div>
                             )
                         }
