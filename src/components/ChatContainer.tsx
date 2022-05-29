@@ -143,6 +143,7 @@ const ChatContainer: React.FC<Props> = ({
                     //console.log('In ws');
 
                     var data = JSON.parse(incoming.data);
+                    console.log(data);
 
                     if ('data' in data && 'chat' in data.data) {
 
