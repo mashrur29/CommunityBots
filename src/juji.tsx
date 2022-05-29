@@ -68,7 +68,7 @@ export const welcomeMessages = [
     "Hello, I'm a work expert chatbot who will ask you questions about your everyday work routine.",
     "Now I'm going to ask you some questions about your job. How has the pandemic affected your employment status?",
     "Now I'd like to ask you some questions about your education. Are you a student?",
-    "Finally I am going to ask you some questions about online video conferencing. How have the tele-work methods affected your work (in the short and long runs)? Can you think of concrete examples such as time it takes to get a task done, or the propensity to get distracted by online shopping or social media?",
+    "Finally I am going to ask you some questions about online video conferencing. Do you find video conferencing an effective platform for learning?",
     "Hello, I'm a healthcare expert chatbot who will inquire about how you maintain your physical and mental well-being.",
     "Now I'm going to ask you some questions about your recreational activities. What do you do for leisure?",
     "Finally I am going to ask you some questions about your hobbies. Do you have any hobbies?"
